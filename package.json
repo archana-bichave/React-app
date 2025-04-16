@@ -1,0 +1,23 @@
+{
+  "name": "react-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/archana-bichave/React-app.git"
+  },
+  "keywords": [],
+  "author": "Archana Baradi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/archana-bichave/React-app/issues"
+  },
+  "homepage": "https://github.com/archana-bichave/React-app#readme",
+  "devDependencies": {
+    "parcel": "^2.14.4"
+  }
+}
