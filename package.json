@@ -2,7 +2,6 @@
   "name": "react-app",
   "version": "1.0.0",
   "description": "",
-  "main": "App.js",
   "scripts": {
     "test": "jest"
   },
@@ -19,5 +18,9 @@
   "homepage": "https://github.com/archana-bichave/React-app#readme",
   "devDependencies": {
     "parcel": "^2.14.4"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   }
 }
