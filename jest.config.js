@@ -146,6 +146,7 @@ const config = {
 
   // The test environment that will be used for testing
   testEnvironment: "jsdom",
+  setupFiles: ['<rootDir>/setup.jest.js'],
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
