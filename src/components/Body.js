@@ -12,8 +12,6 @@ export default Body = () => {
   const [filteredListOfRestaurant, setFilteredListOfRestaurant] = useState([]);
   const [searchText, setSearchText] = useState("");
   const [header, setHeader] = useState("");
-  // const cartItems = useSelector((store) => store.restaurants.items || []);
-  // console.log('############cartItems', cartItems);
   useEffect(() => {
     fetchData();
   }, []);
@@ -31,7 +29,6 @@ export default Body = () => {
       "https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.5204303&lng=73.8567437&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
     const list = await data.json();
-
     const restaurantListWithGridElements = list?.data?.cards.filter((cardObj) => {
       return cardObj.card.card.hasOwnProperty('gridElements')
     });
@@ -40,7 +37,6 @@ export default Body = () => {
     });
 
     setHeader(list?.data?.cards[1].card.card.header.title);
-    console.log('****', header);
 
     setListOfRestaurant(
       restaurantObj?.card?.card?.gridElements?.infoWithStyle?.restaurants
@@ -74,7 +70,7 @@ export default Body = () => {
       <div className="flex justify-between mb-16 px-20">
         <div className="search-container">
           <div className="search-wrapper">
-          <input type="text" placeholder="Search restaurant" className="border border-solid border-gray h-12 w-96 rounded-lg p-4" value={searchText} onChange={(e) => onSearchInputChange(e) } onKeyUp={() => {onSearchInputKeyUp()}}></input>
+          <input type="text" data-testId="searchBox" placeholder="Search restaurant" className="border border-solid border-gray h-12 w-96 rounded-lg p-4" value={searchText} onChange={(e) => onSearchInputChange(e) } onKeyUp={() => {onSearchInputKeyUp()}}></input>
           </div>
         </div>
         <button
